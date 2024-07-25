@@ -11,7 +11,7 @@ func WriteASCIIArt(lines []string, arguments string) {
 	argument := strings.Split(arguments, "\n")
 	count := 0
 	if len(os.Args[1]) < 9 {
-		fmt.Println("Usage: go run . --output=banner.txt <string> <bannerfile>\n\nEX: go run . --output=<fileName.txt> something standard")
+		fmt.Println("Usage: go run . [OPTION] [STRING] [BANNER]\n\nEX: go run . --output=<fileName.txt> something standard")
 		os.Exit(0)
 	}
 	outputFile := os.Args[1]

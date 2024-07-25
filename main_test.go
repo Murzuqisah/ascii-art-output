@@ -9,7 +9,7 @@ import (
 	"ascii/asciiart"
 )
 
-func TestWriteASCIIArt(t *testing.T) {
+func TestPrintASCIIArt(t *testing.T) {
 	tests := []struct {
 		name       string
 		bannerFile string
@@ -44,7 +44,7 @@ func TestWriteASCIIArt(t *testing.T) {
 			name:       "NonASCIICharacter",
 			bannerFile: "standard.txt",
 			arguments:  "hellö",
-			want:       "",
+			want:       "Error: Non-ASCII/printable characters found",
 			wantErr:    true,
 		},
 	}
